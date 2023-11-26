@@ -98,7 +98,7 @@ export const Cover = ({ url, tempUrl, preview }: CoverImageProps) => {
         <Image src={tempUrl} alt="Cover" className="object-cover" fill />
       )}
       {url && !preview && (
-        <div className="opacity-100 md:opacity-0 md:group-hover:opacity-100 absolute bottom-5 right-2 md:right-5 flex items-center gap-x-2">
+        <div className="opacity-100 md:opacity-0 md:group-hover:opacity-100 absolute bottom-2 right-3 md:bottom-5 md:right-5 flex items-center gap-x-2">
           <Button
             onClick={() => coverImage.onReplace(url)}
             className="text-muted-foreground text-xs"
@@ -129,7 +129,7 @@ export const Cover = ({ url, tempUrl, preview }: CoverImageProps) => {
         </div>
       )}
       {tempUrl && !preview && (
-        <div className="opacity-100 md:opacity-0 md:group-hover:opacity-100 absolute bottom-2 right-3 md:right-5 flex items-center gap-x-2">
+        <div className="opacity-100 md:opacity-0 md:group-hover:opacity-100 absolute bottom-2 right-3 md:bottom-5 md:right-5 flex items-center gap-x-2">
           <Popover>
             <PopoverTrigger asChild>
               <Button
