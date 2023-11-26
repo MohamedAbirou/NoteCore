@@ -133,13 +133,17 @@ export const Navigation = () => {
   };
 
   const onSearchClick = () => {
-    collapse()
-    search.onOpen()
+    if (isMobile) {
+      collapse()
+      search.onOpen()
+    }
   }
 
   const onSettingsClick = () => {
-    collapse()
-    settings.onOpen()
+    if (isMobile) {
+      collapse()
+      settings.onOpen()
+    }
   }
 
   return (
