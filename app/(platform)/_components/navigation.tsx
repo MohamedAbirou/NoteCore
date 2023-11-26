@@ -137,6 +137,8 @@ export const Navigation = () => {
       collapse()
       search.onOpen()
     }
+
+    search.onOpen()
   }
 
   const onSettingsClick = () => {
@@ -144,6 +146,8 @@ export const Navigation = () => {
       collapse()
       settings.onOpen()
     }
+
+    settings.onOpen()
   }
 
   return (
