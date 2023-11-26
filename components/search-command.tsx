@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { File } from "lucide-react"
 import { useQuery } from "convex/react"
-import { useRouter } from "next/navigation"
+import { useParams, useRouter } from "next/navigation"
 import { useUser } from "@clerk/clerk-react"
 import { useSearch } from "@/hooks/use-search"
 import { api } from "@/convex/_generated/api"
@@ -54,7 +54,7 @@ export const SearchCommand = () => {
                 <CommandEmpty>No results found.</CommandEmpty>
                 <CommandGroup heading="Documents">
                     {documents?.map((document) => (
-                        <CommandItem key={document._id} value={`${document._id}-${document.title}`} title={document.title} onSelect={onSelect} className="md:hover:bg-primary/10 cursor-pointer rounded-md" >
+                        <CommandItem key={document._id} value={`${document._id}-${document.title}`} title={document.title} onSelect={() => onSelect(document._id)} className="md:hover:bg-primary/10 cursor-pointer rounded-md" >
                             {document.icon ? (
                                 <p className="mr-2 text-[18px]">
                                     {document.icon}
