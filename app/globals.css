@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
  
+body,
+html,
+:root {
+  height: 100%;
+}
+
+.fade-out {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.fade-out.hidden {
+  opacity: 0;
+}
+
+
 @layer base {
   :root {
     --background: 0 0% 100%;
