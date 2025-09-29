@@ -48,7 +48,7 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/notecore.git
+git clone https://github.com/MohamedAbirou/notecore.git
 cd notecore
 ```
 
