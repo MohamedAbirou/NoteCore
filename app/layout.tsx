@@ -6,6 +6,7 @@ import ConvexClientProvider from "@/components/providers/convex-provider";
 import { Toaster } from "sonner";
 import { ModalProvider } from "@/components/providers/modal-provider";
 import { EdgeStoreProvider } from "@/lib/edgestore";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,6 +49,9 @@ export default function RootLayout({
               <Toaster position="top-right" duration={1500} />
               <ModalProvider />
               {children}
+
+              {/* ✅ Analytics at the bottom */}
+              <Analytics />
             </ThemeProvider>
           </EdgeStoreProvider>
         </ConvexClientProvider>
