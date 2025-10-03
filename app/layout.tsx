@@ -7,6 +7,7 @@ import { Toaster } from "sonner";
 import { ModalProvider } from "@/components/providers/modal-provider";
 import { EdgeStoreProvider } from "@/lib/edgestore";
 import { Analytics } from "@vercel/analytics/next";
+import { CookieConsentBanner } from "@/components/cookie-consent-banner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -49,8 +50,7 @@ export default function RootLayout({
               <Toaster position="top-right" duration={1500} />
               <ModalProvider />
               {children}
-
-              {/* ✅ Analytics at the bottom */}
+              <CookieConsentBanner />
               <Analytics />
             </ThemeProvider>
           </EdgeStoreProvider>
